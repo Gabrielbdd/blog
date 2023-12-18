@@ -50,8 +50,8 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
 
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Latest posts</h3>
-        <Link href="/posts" label="See all posts" isUnderline target="_self" />
+        <h3 class="text-lg text-neutral-100">Últimos posts</h3>
+        <Link href="/posts" label="Ver todas postagens" isUnderline target="_self" />
       </header>
       {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
@@ -72,31 +72,31 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       </section>
     </article>
 
+    <!-- <article class="flex flex-col gap-8"> -->
+    <!--   <header class="flex w-full flex-row justify-between gap-2"> -->
+    <!--     <h3 class="text-lg text-neutral-100"> -->
+    <!--       Selected projects ({projects.length}) -->
+    <!--     </h3> -->
+    <!--   </header> -->
+    <!--   {projects.length === 0 && <p>Oops, I must work^^^^^</p>} -->
+    <!---->
+    <!--   <section class="flex flex-col gap-4"> -->
+    <!--     { -->
+    <!--       projects.length !== 0 && -->
+    <!--         projects.map((project) => <ProjectCard {...project} />) -->
+    <!--     } -->
+    <!--   </section> -->
+    <!-- </article> -->
+
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">
-          Selected projects ({projects.length})
-        </h3>
-      </header>
-      {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
-
-      <section class="flex flex-col gap-4">
-        {
-          projects.length !== 0 &&
-            projects.map((project) => <ProjectCard {...project} />)
-        }
-      </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Get in touch</h3>
+        <h3 class="text-lg text-neutral-100">Entre em contato</h3>
       </header>
       <p>
-        Email me at <Link
+        Me envie um email em <Link
           href={`mailto:${presentation.mail}`}
           label={presentation.mail}
-        /> or follow me via my social links.
+        /> ou me siga em alguma rede social.
       </p>
 
       <SocialLinks />
